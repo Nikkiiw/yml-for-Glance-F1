@@ -183,6 +183,10 @@
       </div>
     </div>
 
+
+        <div class="margin-block-10"></div> 
+
+        
         <div style="margin-block: 1rem;">
           <img
             src="http://192.168.50.5:4463/f1/next_map/"
