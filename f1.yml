@@ -12,9 +12,9 @@
       <div class="margin-block-4">
         <p class="color-highlight" style="font-size: 15px;">{{ $session.String "raceName" }}</p>
 
-        <div class="margin-block-10"></div>  <!--赛事名字之下的行距-->
+        <div class="margin-block-10"></div> 
         
-        <!--一练时间-->
+        <!--FP1 SCHEDULE-->
         <p class="color-primary" style="font-size: 15px;">
           <span>Free Practice 1</span>
           {{ $fp1datetime := .JSON.String "race.0.schedule.fp1.datetime_rfc3339" }}
@@ -36,7 +36,7 @@
           {{ $fp1formatted }}
         </p>
 
-        <!--冲刺排位时间-->
+        <!--SQ SCHEDULE-->
         {{ if and (ne ($.JSON.String "race.0.schedule.sprintQualy.date") "null") (ne ($.JSON.String "race.0.schedule.sprintQualy.date") "") }}
           <p class="color-primary" style="font-size: 15px;">
             <span>Sprint Qualifying</span>
@@ -60,7 +60,7 @@
             </p>
         {{ end }}
 
-        <!--冲刺赛时间-->
+        <!--SR SCHEDULE-->
         {{ if and (ne ($.JSON.String "race.0.schedule.sprintRace.date") "null") (ne ($.JSON.String "race.0.schedule.sprintRace.date") "") }}
           <p class="color-primary" style="font-size: 15px;">
             <span>Sprint Race</span>
@@ -84,7 +84,7 @@
             </p>
         {{ end }}
 
-        <!--二练时间-->
+        <!--FP2 SCHEDULE-->
         {{ if and (ne ($.JSON.String "race.0.schedule.fp2.date") "null") (ne ($.JSON.String "race.0.schedule.fp2.date") "") }}
           <p class="color-primary" style="font-size: 15px;">
             <span>Free Practice 2</span>
@@ -108,7 +108,7 @@
             </p>
         {{ end }}        
         
-        <!--三练时间-->
+        <!--FP3 SCHEDULE-->
         {{ if and (ne ($.JSON.String "race.0.schedule.fp3.date") "null") (ne ($.JSON.String "race.0.schedule.fp3.date") "") }}
           <p class="color-primary" style="font-size: 15px;">
             <span>Free Practice 3</span>
@@ -132,7 +132,7 @@
             </p>
         {{ end }}
 
-        <!--排位时间-->
+        <!--QUALY SCHEDULE-->
         {{ if and (ne ($.JSON.String "race.0.schedule.qualy.date") "null") (ne ($.JSON.String "race.0.schedule.qualy.date") "") }}
           <p class="color-primary" style="font-size: 15px;">
             <span>Qualifying</span>
@@ -156,7 +156,7 @@
             </p>
         {{ end }}
 
-        <!--正赛时间-->
+        <!--RACE SCHEDULE-->
         {{ if and (ne ($.JSON.String "race.0.schedule.race.date") "null") (ne ($.JSON.String "race.0.schedule.race.date") "") }}
           <p class="color-primary" style="font-size: 15px;">
             <span>Race</span>
